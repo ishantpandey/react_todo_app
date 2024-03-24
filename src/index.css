@@ -74,7 +74,12 @@ input{
   border: none;
   overflow: hidden;
   font-size: 18px;
+  
  
+}
+input:focus{
+  outline:0;
+  background: #f4f2f2;
 }
 .btn-add{
  
