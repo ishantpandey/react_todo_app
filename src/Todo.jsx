@@ -73,7 +73,7 @@ function Todo() {
                 <div className="Footer ">
                   <button className="btn btn-danger" onClick={deleteAll}>
                     <span className="material-symbols-outlined">
-                      delete_forever
+                      {/* delete_forever */}
                     </span>
                   </button>
                 </div>
