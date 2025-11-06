@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Build Docker image
-        run: docker build -t react-todo-app .
+        run: docker build -t ishant2000/react-todo-app .
 
       # Uncomment and configure the following steps to push to Docker Hub or another registry
       - name: Log in to Docker Hub
