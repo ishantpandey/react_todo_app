@@ -34,4 +34,4 @@ jobs:
            password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push ishant2000/react-todo-app:latest
+        run: docker push ishant2000/react-todo-app
