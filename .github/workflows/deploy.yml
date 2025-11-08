@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -35,3 +35,14 @@ jobs:
 
       - name: Push Docker image
         run: docker push ishant2000/react-todo-app
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Deploy React app Docker container
+        run: |
+          docker pull ishant2000/react-todo-app:latest
+          docker stop react-todo-app || true
+          docker rm react-todo-app || true
+          docker run -d -p 3000:3000 --name react-todo-app ishant2000/react-todo-app:latest
